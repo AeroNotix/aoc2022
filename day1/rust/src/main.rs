@@ -19,9 +19,8 @@ fn find_most_calorifically_dense_elf_in_file(path: String, top: usize) -> std::i
     }
 
     elves.sort();
-    elves.reverse();
 
-    Ok(elves.iter().take(top).sum())
+    Ok(elves.iter().rev().take(top).sum())
 }
 
 fn main() {
